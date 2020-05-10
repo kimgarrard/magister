@@ -36,9 +36,8 @@ section:nth-of-type(1) {
 
 .image {
   background-color: #65a5c1;
-  width: 98vw;
   height: 75vh;
-  margin: 1vw;
+  margin: 1em;
 }
 
 .image img {
