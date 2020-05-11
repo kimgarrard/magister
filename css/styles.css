@@ -7,14 +7,8 @@ html, body {
   padding: 0;
 }
 
-@font-face {
-    font-family: "Magister";
-    src: url("../fonts/Magister.ttf") format("truetype");
-}
-
 body {
   background-color: #faf1ec;
-  /* font-family: Magister; */
   font-family: Times;
   overflow: hidden;
 }
@@ -36,11 +30,11 @@ section:nth-of-type(1) {
 
 .image {
   background-color: #65a5c1;
-  height: 75vh;
+  height: 70vh;
   margin: 1em;
 }
 
-.image img {
+.sterren {
   filter: grayscale(100%);
   position: absolute;
   width: 220vw;
@@ -51,9 +45,17 @@ section:nth-of-type(1) {
   opacity: 0.5;
 }
 
+.kijker {
+  width: 45vh;
+  height: auto;
+  position: absolute;
+  top: 30vh;
+  left: 60vw;
+}
+
 svg {
   position: absolute;
-  height: 75vh;
+  height: 70vh;
 }
 
 section:nth-of-type(2) h1, section:nth-of-type(2) div {
@@ -79,7 +81,7 @@ section:nth-of-type(2) span:nth-of-type(2), section:nth-of-type(2) span:nth-of-t
 
 h1 {
   color: #7d5d34;
-  font-size: 5em;
+  font-size: 6em;
   margin: 0;
 }
 
