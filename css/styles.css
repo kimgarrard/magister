@@ -10,7 +10,8 @@ html, body {
 body {
   background-color: #faf1ec;
   font-family: Times;
-  overflow: hidden;
+  cursor: url(../images/cursor2.png), auto;
+  /* overflow: hidden; */
 }
 
 .overlay {
@@ -39,7 +40,7 @@ section:nth-of-type(1) {
   position: absolute;
   width: 220vw;
   margin-left: 60vw;
-  height: 75vh;
+  height: 70vh;
   object-fit: cover;
   mix-blend-mode: lighten;
   opacity: 0.5;
@@ -51,6 +52,23 @@ section:nth-of-type(1) {
   position: absolute;
   top: 30vh;
   left: 60vw;
+  z-index: 3;
+  animation: float 5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: perspective(10em) translate3d(0vh, 0vh, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: perspective(10em) translate3d(-2vh, -5vh, 1em) rotate(-5deg);
+  }
+
+  100% {
+    transform: perspective(10em) translate3d(-5vh, 0vh, -2em) rotate(-10deg);
+  }
 }
 
 svg {
@@ -99,4 +117,111 @@ p {
   .image svg {
     width: 90vw;
   }
+}
+
+
+
+
+
+
+
+.sterrenlucht {
+  margin-top: -1em;
+  cursor: url(../images/cursor2.png), auto;
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  animation: backgroundcolor 5s ease infinite;
+  animation-direction: alternate;
+}
+
+.sterrenlucht .bg1 {
+    filter: grayscale(100%);
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    position: absolute;
+    background: url(../images/sterrenbegin.jpg) no-repeat center center;
+    background-size: cover;
+    width:100%;
+    height: 100%;
+    animation: pulsate1 2s ease infinite;
+}
+
+.sterrenlucht .bg2 {
+    filter: grayscale(100%);
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    position: absolute;
+    background: url(../images/sterrenbegin.jpg) no-repeat center center;
+    background-size: cover;
+    width:100%;
+    height: 100%;
+    transform: scaleX(-1);
+    animation: pulsate2 2s ease infinite;
+    opacity: 0.5;
+}
+
+.invisible {
+    animation: dissapear 4s forwards;
+}
+
+@keyframes backgroundcolor  {
+    0% {
+      background-color: black;
+    }
+
+    100% {
+      background-color: #0c1c37;
+    }
+}
+
+@keyframes pulsate1  {
+    0% {
+      opacity: 0.6;
+    }
+
+    50% {
+      opacity: 0.2;
+    }
+
+    100% {
+      opacity: 0.6;
+    }
+}
+
+@keyframes pulsate2  {
+    0% {
+      opacity: 0.0;
+    }
+
+    50% {
+      opacity: 0.6;
+    }
+
+    100% {
+      opacity: 0.0;
+    }
+}
+
+@keyframes dissapear  {
+    0% {
+      opacity: 1;
+      transform: perspective(10em) translate3d(0vh, 0vh, 0);
+    }
+
+    40% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+      transform: perspective(10em) translate3d(0vh, 0vh, 10em);
+      display: none;
+    }
 }
