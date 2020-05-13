@@ -164,7 +164,7 @@ p {
 }
 
 .invisible {
-    animation: dissapear 4s forwards;
+    animation: dissapear 3s forwards;
 }
 
 @keyframes backgroundcolor  {
