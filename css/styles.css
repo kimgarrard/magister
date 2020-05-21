@@ -7,6 +7,36 @@ html, body {
   padding: 0;
 }
 
+.div1, .div2, .vierkant {
+  width: 20em;
+  height: 20em;
+  position: absolute;
+}
+
+.vierkant {
+  background-color: rgba(255,255,255, 0.5);
+}
+
+.div1hoi {
+  animation: div1 2s infinite;
+}
+
+.div2hoi {
+  animation: div2 2s infinite;
+}
+
+@keyframes div1 {
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes div2 {
+  100% {
+    transform: translateX(20vw);
+  }
+}
+
 body {
   background-color: #faf1ec;
   font-family: Times;
@@ -100,6 +130,18 @@ section:nth-of-type(1) {
 svg {
   position: absolute;
   height: 70vh;
+  animation: spin 2s 5s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(180deg) scale(1.2);
+
+  }
 }
 
 section:nth-of-type(2) h1, section:nth-of-type(2) div {
@@ -142,6 +184,13 @@ p {
 @media(min-width: 20em) and (max-width: 45em) {
   .image svg {
     width: 90vw;
+  }
+}
+
+
+@media (min-width: 79em) {
+  .hide {
+    visibility: hidden;
   }
 }
 
@@ -264,15 +313,15 @@ p {
     }
 
     25% {
-        transform: translate(-5vw, -30vh);
+        transform: translate(-5vw, -30vh) rotate(-20deg);
     }
 
     50% {
-        transform: translate(-5vw, -50vh);
+        transform: translate(-5vw, -50vh) rotate(20deg);
     }
 
     75% {
-        transform: translate(5vw, -20vh);
+        transform: translate(5vw, -20vh) rotate(50deg);
     }
 
     100% {
@@ -291,18 +340,45 @@ p {
     }
 
     25% {
-        transform: translate(5vw, -20vh);
+        transform: translate(5vw, -20vh) rotate(-50deg);
     }
 
     50% {
-        transform: translate(-5vw, -50vh);
+        transform: translate(-5vw, -50vh) rotate(-20deg);
     }
 
     75% {
-        transform: translate(-5vw, -30vh);
+        transform: translate(-5vw, -30vh) rotate(20deg);
     }
 
     100% {
         transform: translate(0vw, 0vh);
     }
+}
+
+
+.type {
+  motion-path: path("M.5,119.54S102.44,17.82,212.33,17.82,315.6,116.9,417.54,119.54,526.1,20.47,633.34,17.82,740.58,140.68,842.52,134.07,937.85,29.71,1099.37,17.82,1271.48,152.57,1388,134.07,1538.92,15.18,1650.13,16.5,1809,135.39,1809,135.39");
+  offset-path: path("M.5,119.54S102.44,17.82,212.33,17.82,315.6,116.9,417.54,119.54,526.1,20.47,633.34,17.82,740.58,140.68,842.52,134.07,937.85,29.71,1099.37,17.82,1271.48,152.57,1388,134.07,1538.92,15.18,1650.13,16.5,1809,135.39,1809,135.39");
+  animation: move 20s infinite;
+  motion-rotation: reverse;
+  position: absolute;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    motion-offset: 0%;
+    offset-distance: 0%;
+  }
+
+  20%, 70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    motion-offset: 100%;
+    offset-distance: 100%;
+  }
 }

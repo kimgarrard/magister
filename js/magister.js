@@ -11,7 +11,7 @@ body.addEventListener('click', function() {
 });
 
 bg.addEventListener('click', function() {
-  bg.classList.add("changebg");
+  bg.classList.toggle("changebg");
 });
 
 
