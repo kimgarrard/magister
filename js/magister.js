@@ -4,9 +4,14 @@
 
 let body = document.querySelector("body");
 let sterrenlucht = document.querySelector(".sterrenlucht");
+let bg = document.querySelector(".image");
 
 body.addEventListener('click', function() {
   sterrenlucht.classList.add("invisible");
+});
+
+bg.addEventListener('click', function() {
+  bg.classList.add("changebg");
 });
 
 
