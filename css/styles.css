@@ -57,6 +57,24 @@ body {
   fill: rgba(239,202,8,0.2) !important;
 }
 
+.sterretjes {
+  animation: twinkle 2s linear infinite;
+}
+
+@keyframes twinkle  {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+}
+
 section:nth-of-type(1) {
   display: flex;
   justify-content: center;
