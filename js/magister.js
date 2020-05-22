@@ -51,6 +51,7 @@ nacht.addEventListener('click', function() {
   body.classList.toggle("nachtstylebg");
   h1.classList.toggle("nachtstyletext");
   p.classList.toggle("nachtstyletext");
+  bg.classList.toggle("nachtstylebg2")
 });
 
 

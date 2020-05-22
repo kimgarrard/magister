@@ -31,6 +31,10 @@ body {
   background-color: #3d4f63;
 }
 
+.nachtstylebg2 {
+  background-color: #1B2432 !important;
+}
+
 .nachtstyletext {
   color: white !important;
 }
