@@ -5,15 +5,10 @@
 let body = document.querySelector("body");
 let sterrenlucht = document.querySelector(".sterrenlucht");
 let bg = document.querySelector(".image");
-
-body.addEventListener('click', function() {
-  sterrenlucht.classList.add("invisible");
-});
-
-bg.addEventListener('click', function() {
-  bg.classList.toggle("changebg");
-});
-
+let svg = document.querySelector(".svgster");
+let ster1 = document.querySelector(".ster1 polygon");
+let ster2 = document.querySelector(".ster2 polygon");
+let ster3 = document.querySelector(".ster3 polygon");
 
 let m = document.querySelector("h1 span:nth-of-type(1)");
 let a = document.querySelector("h1 span:nth-of-type(2)");
@@ -23,6 +18,30 @@ let s = document.querySelector("h1 span:nth-of-type(6)");
 let t = document.querySelector("h1 span:nth-of-type(8)");
 let e = document.querySelector("h1 span:nth-of-type(9)");
 let r = document.querySelector("h1 span:nth-of-type(10)");
+
+body.addEventListener('click', function() {
+  sterrenlucht.classList.add("invisible");
+});
+
+bg.addEventListener('click', function() {
+  bg.classList.toggle("changebg");
+});
+
+svg.addEventListener('mouseover', function() {
+  console.log('ster');
+  svg.classList.add("starspin");
+  ster1.classList.add("starspincolor");
+  ster2.classList.add("starspincolor");
+  ster3.classList.add("starspincolor");
+});
+
+svg.addEventListener('mouseout', function() {
+  svg.classList.remove("starspin");
+  ster1.classList.remove("starspincolor");
+  ster2.classList.remove("starspincolor");
+  ster3.classList.remove("starspincolor");
+});
+
 
 body.onkeydown = getKeyAndMove;
 

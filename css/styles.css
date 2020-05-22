@@ -36,6 +36,27 @@ body {
   opacity: 0.05;
 }
 
+.buttons {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+  z-index: 1;
+}
+
+.buttons div {
+  width: 5vw;
+  padding: 1em;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.maan path {
+  stroke-width: 1.5px !important;
+  fill: rgba(239,202,8,0.2) !important;
+}
+
 section:nth-of-type(1) {
   display: flex;
   justify-content: center;
@@ -159,10 +180,18 @@ section:nth-of-type(1) {
   }
 }
 
-svg {
+.svgster {
   position: absolute;
   height: 70vh;
-  animation: spin 2s 5s linear;
+  z-index: 2;
+}
+
+.svgster:hover {
+  animation: spin 3s;
+}
+
+.starspincolor {
+  animation: spincolor 3s;
 }
 
 @keyframes spin {
@@ -170,9 +199,26 @@ svg {
     transform: rotate(0deg) scale(1);
   }
 
-  100% {
+  50% {
     transform: rotate(180deg) scale(1.2);
+  }
 
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes spincolor {
+  50% {
+    stroke: rgba(36,59,74,0.5);
+    stroke-width: 0.75px
+  }
+}
+
+@keyframes spincoloryellow {
+  50% {
+    stroke: rgba(255,203,71,0.5);
+    stroke-width: 0.75px
   }
 }
 
@@ -271,7 +317,7 @@ p {
 }
 
 .invisible {
-    animation: dissapear 3s forwards;
+    animation: dissapear 0.5s forwards;
 }
 
 @keyframes backgroundcolor  {
