@@ -58,7 +58,7 @@ body {
 }
 
 .sterretjes {
-  animation: twinkle 2s linear infinite;
+  animation: twinkle 2.5s linear infinite;
 }
 
 @keyframes twinkle  {
@@ -147,16 +147,16 @@ section:nth-of-type(1) {
 
   50% {
     clip-path:  polygon(50% 50%, 50% 25%, 50% 50%, 75% 50%, 50% 50%, 50% 75%, 50% 50%, 25% 50%);
-    background-color: #65a5c1;
+    background-color: #75BCB7;
   }
 
   51% {
     clip-path:  polygon(50% 50%, 50% 25%, 50% 50%, 75% 50%, 50% 50%, 50% 75%, 50% 50%, 25% 50%);
-    background-color: pink;
+    background-color:#9BB5E0;
   }
 
   100% {
-    background-color: pink;
+    background-color: #9BB5E0;
     clip-path: polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%);
   }
 }
