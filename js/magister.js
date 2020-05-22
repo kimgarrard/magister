@@ -14,6 +14,7 @@ let nacht = document.querySelector(".nacht");
 let dag = document.querySelector(".dag");
 let h1 = document.querySelector("h1");
 let p = document.querySelector(".text p");
+let bla = document.querySelector(".image");
 
 let m = document.querySelector("h1 span:nth-of-type(1)");
 let a = document.querySelector("h1 span:nth-of-type(2)");
@@ -52,6 +53,7 @@ nacht.addEventListener('click', function() {
   h1.classList.toggle("nachtstyletext");
   p.classList.toggle("nachtstyletext");
   bg.classList.toggle("nachtstylebg2")
+  bla.classList.toggle("nachtstyleimage");
 });
 
 
