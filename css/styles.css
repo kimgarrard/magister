@@ -23,7 +23,16 @@ body {
   background-color: #faf1ec;
   font-family: Times;
   cursor: url(../images/cursor2.png), auto;
+  transition: 2s ease;
   /* overflow: hidden; */
+}
+
+.nachtstylebg {
+  background-color: #3d4f63;
+}
+
+.nachtstyletext {
+  color: white !important;
 }
 
 .overlay {
@@ -37,41 +46,31 @@ body {
 }
 
 .buttons {
-  width: 100%;
+  position: absolute;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 70vh;
   z-index: 1;
+}
+
+.button2 {
+  right: 0;
 }
 
 .buttons div {
   width: 5vw;
   padding: 1em;
   background-color: rgba(255,255,255,0.2);
+  transition: 0.2s ease;
+}
+
+.buttons div:hover {
+  background-color: rgba(255,255,255,0.5);
 }
 
 .maan path {
   stroke-width: 1.5px !important;
   fill: rgba(239,202,8,0.2) !important;
-}
-
-.sterretjes {
-  animation: twinkle 2.5s linear infinite;
-}
-
-@keyframes twinkle  {
-    0% {
-      opacity: 0;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-    }
 }
 
 section:nth-of-type(1) {

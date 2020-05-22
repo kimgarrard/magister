@@ -10,6 +10,11 @@ let ster1 = document.querySelector(".ster1 polygon");
 let ster2 = document.querySelector(".ster2 polygon");
 let ster3 = document.querySelector(".ster3 polygon");
 
+let nacht = document.querySelector(".nacht");
+let dag = document.querySelector(".dag");
+let h1 = document.querySelector("h1");
+let p = document.querySelector(".text p");
+
 let m = document.querySelector("h1 span:nth-of-type(1)");
 let a = document.querySelector("h1 span:nth-of-type(2)");
 let g = document.querySelector("h1 span:nth-of-type(4)");
@@ -40,6 +45,12 @@ svg.addEventListener('mouseout', function() {
   ster1.classList.remove("starspincolor");
   ster2.classList.remove("starspincolor");
   ster3.classList.remove("starspincolor");
+});
+
+nacht.addEventListener('click', function() {
+  body.classList.toggle("nachtstylebg");
+  h1.classList.toggle("nachtstyletext");
+  p.classList.toggle("nachtstyletext");
 });
 
 
