@@ -7,24 +7,6 @@ html, body {
   padding: 0;
 }
 
-.div1, .div2, .vierkant {
-  width: 20em;
-  height: 20em;
-  position: absolute;
-}
-
-.vierkant {
-  background-color: rgba(255,255,255, 0.5);
-}
-
-.div1hoi {
-  animation: div1 2s infinite;
-}
-
-.div2hoi {
-  animation: div2 2s infinite;
-}
-
 @keyframes div1 {
   100% {
     transform: rotate(20deg);
@@ -63,7 +45,39 @@ section:nth-of-type(1) {
   background-color: #65a5c1;
   height: 70vh;
   margin: 1em;
+  position: relative;
 }
+
+.image::after {
+  content: "";
+  background: url(../images/stars.jpg);
+  background-size: cover;
+  mix-blend-mode: lighten;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  /* filter: grayscale(100%); */
+  animation: pulsate3 2s infinite;
+}
+
+@keyframes pulsate3  {
+    0% {
+      opacity: 0.0;
+    }
+
+    50% {
+      opacity: 0.6;
+    }
+
+    100% {
+      opacity: 0.0;
+    }
+}
+
+
 
 .changebg {
   animation: polygon 2s forwards;
@@ -109,7 +123,7 @@ section:nth-of-type(1) {
   top: 30vh;
   left: 60vw;
   z-index: 3;
-  animation: float 5s infinite;
+  animation: float 5s linear infinite;
   animation-direction: alternate;
 }
 
@@ -130,7 +144,7 @@ section:nth-of-type(1) {
 svg {
   position: absolute;
   height: 70vh;
-  animation: spin 2s 5s;
+  animation: spin 2s 5s linear;
 }
 
 @keyframes spin {
@@ -303,7 +317,7 @@ p {
 
 
 .float1 {
-  animation: floatletter1 20s infinite;
+  animation: floatletter1 20s linear infinite;
   animation-direction: alternate;
 }
 
@@ -330,7 +344,7 @@ p {
 }
 
 .float2 {
-  animation: floatletter2 20s infinite;
+  animation: floatletter2 20s linear infinite;
   animation-direction: alternate;
 }
 
@@ -360,10 +374,15 @@ p {
 .type {
   motion-path: path("M.5,119.54S102.44,17.82,212.33,17.82,315.6,116.9,417.54,119.54,526.1,20.47,633.34,17.82,740.58,140.68,842.52,134.07,937.85,29.71,1099.37,17.82,1271.48,152.57,1388,134.07,1538.92,15.18,1650.13,16.5,1809,135.39,1809,135.39");
   offset-path: path("M.5,119.54S102.44,17.82,212.33,17.82,315.6,116.9,417.54,119.54,526.1,20.47,633.34,17.82,740.58,140.68,842.52,134.07,937.85,29.71,1099.37,17.82,1271.48,152.57,1388,134.07,1538.92,15.18,1650.13,16.5,1809,135.39,1809,135.39");
-  animation: move 20s infinite;
+  animation: move 20s linear infinite;
   motion-rotation: reverse;
   position: absolute;
+  z-index: 2;
+  bottom: 40vh;
+  border: none;
+  background-color: rgba(255,255,255,0.5);
 }
+
 
 @keyframes move {
   0% {
