@@ -48,28 +48,46 @@ section:nth-of-type(1) {
   position: relative;
 }
 
-.image::after {
+.image::before, .image::after {
   content: "";
   background: url(../images/stars.jpg);
   background-size: cover;
   mix-blend-mode: lighten;
-  opacity: 0.4;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   /* filter: grayscale(100%); */
-  animation: pulsate3 2s infinite;
+  animation: pulsate3 2s ease infinite;
+}
+
+.image::after {
+  animation: pulsate4 2s ease infinite;
+  transform: scaleX(-1);
 }
 
 @keyframes pulsate3  {
+    0% {
+      opacity: 0.4;
+    }
+
+    50% {
+      opacity: 0.0;
+    }
+
+    100% {
+      opacity: 0.4;
+    }
+}
+
+@keyframes pulsate4  {
     0% {
       opacity: 0.0;
     }
 
     50% {
-      opacity: 0.6;
+      opacity: 0.5;
     }
 
     100% {
