@@ -85,7 +85,6 @@ dag.addEventListener('click', function() {
   dag.classList.toggle("nachtstylebutton");
 
   nacht.classList.toggle("hide");
-  bg.classList.remove("imagebegin");
 });
 
 
