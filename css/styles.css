@@ -391,7 +391,11 @@ p {
   html {
     overflow: hidden;
   }
-  
+
+  .type {
+    display: none;
+  }
+
   .buttons {
     align-items: flex-start;
     margin: 0em 1em;
