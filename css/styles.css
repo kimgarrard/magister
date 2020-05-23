@@ -401,6 +401,12 @@ p {
   .image svg {
     width: 90vw;
   }
+
+  .kijker {
+    width: 50vw;
+    top: 50vh;
+    left: 50vw;
+  }
 }
 
 
