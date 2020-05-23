@@ -3,6 +3,7 @@
 /*eslint 'no-console':0*/
 
 let body = document.querySelector("body");
+let begintext = document.querySelector(".begintext");
 let sterrenlucht = document.querySelector(".sterrenlucht");
 let bg = document.querySelector(".image");
 let svg = document.querySelector(".svgster");
@@ -27,7 +28,8 @@ let t = document.querySelector("h1 span:nth-of-type(8)");
 let e = document.querySelector("h1 span:nth-of-type(9)");
 let r = document.querySelector("h1 span:nth-of-type(10)");
 
-body.addEventListener('click', function() {
+begintext.addEventListener('click', function() {
+  begintext.classList.add("hide");
   sterrenlucht.classList.add("invisible");
 });
 
