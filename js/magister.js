@@ -54,29 +54,27 @@ nacht.addEventListener('click', function() {
   body.classList.toggle("nachtstylebg");
   h1.classList.toggle("nachtstyletext");
   p.classList.toggle("nachtstyletext");
-  bg.classList.toggle("nachtstylebg2")
+  // bg.classList.toggle("nachtstylebg2")
   image.classList.toggle('no-after');
   image.classList.toggle("nachtstyleimage");
   svg.classList.toggle("hide");
   svgnacht.classList.toggle("hide");
   nacht.classList.toggle("nachtstylebutton");
+
+  dag.classList.toggle("hide");
 });
 
 dag.addEventListener('click', function() {
-  body.classList.remove("nachtstylebg");
-  h1.classList.remove("nachtstyletext");
-  p.classList.remove("nachtstyletext");
-  bg.classList.remove("nachtstylebg2")
-  image.classList.remove('no-after');
-  image.classList.remove("nachtstyleimage");
-  svg.classList.remove("hide");
-  svgnacht.classList.add("hide");
-  nacht.classList.remove("nachtstylebutton");
-
+  body.classList.toggle("dagstylebg");
+  h1.classList.toggle("dagstyletext");
+  p.classList.toggle("dagstyletext");
   image.classList.toggle('no-after');
   image.classList.toggle("dagstyleimage");
   svg.classList.toggle("hide");
   svgdag.classList.toggle("hide");
+  dag.classList.toggle("nachtstylebutton");
+
+  nacht.classList.toggle("hide");
 });
 
 
