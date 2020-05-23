@@ -54,10 +54,11 @@ nacht.addEventListener('click', function() {
   h1.classList.toggle("nachtstyletext");
   p.classList.toggle("nachtstyletext");
   bg.classList.toggle("nachtstylebg2")
-  bla.classList.add('no-after');
-  // bla.classList.toggle("nachtstyleimage");
+  bla.classList.toggle('no-after');
+  bla.classList.toggle("nachtstyleimage");
   svg.classList.toggle("hide");
   svgnacht.classList.toggle("hide");
+  nacht.classList.toggle("nachtstylebutton");
 });
 
 
