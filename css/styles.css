@@ -415,6 +415,10 @@ p {
     top: 50vh;
     left: 50vw;
   }
+
+  h1 {
+    font-size: 5em;
+  }
 }
 
 
