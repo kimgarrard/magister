@@ -27,6 +27,11 @@ body {
   /* overflow: hidden; */
 }
 
+.hide {
+  display: none;
+  transition: 2s ease;
+}
+
 .nachtstylebg {
   background-color: #3d4f63;
 }
@@ -74,7 +79,7 @@ body {
 
 .maan path {
   stroke-width: 1.5px !important;
-  fill: rgba(239,202,8,0.2) !important;
+  /* fill: rgba(239,202,8,0.2) !important; */
 }
 
 section:nth-of-type(1) {
@@ -106,6 +111,10 @@ section:nth-of-type(1) {
 .image::after {
   animation: pulsate4 2s ease infinite;
   transform: scaleX(-1);
+}
+
+.image.no-after:after, .image.no-after:before {
+  background: none;
 }
 
 .nachtstyleimage {
@@ -233,10 +242,14 @@ section:nth-of-type(1) {
   }
 }
 
-.svgster {
+.image svg {
   position: absolute;
   height: 70vh;
   z-index: 2;
+}
+
+.svgnacht {
+  padding: 1em;
 }
 
 .svgster:hover {
@@ -249,15 +262,15 @@ section:nth-of-type(1) {
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg);
   }
 
   50% {
-    transform: rotate(180deg) scale(1.2);
+    transform: rotate(180deg);
   }
 
   100% {
-    transform: rotate(360deg) scale(1);
+    transform: rotate(360deg);
   }
 }
 
@@ -322,6 +335,7 @@ p {
 @media (min-width: 79em) {
   .hide {
     visibility: hidden;
+    transition: 2s ease;
   }
 }
 

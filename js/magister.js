@@ -6,6 +6,7 @@ let body = document.querySelector("body");
 let sterrenlucht = document.querySelector(".sterrenlucht");
 let bg = document.querySelector(".image");
 let svg = document.querySelector(".svgster");
+let svgnacht = document.querySelector(".svgnacht");
 let ster1 = document.querySelector(".ster1 polygon");
 let ster2 = document.querySelector(".ster2 polygon");
 let ster3 = document.querySelector(".ster3 polygon");
@@ -53,7 +54,10 @@ nacht.addEventListener('click', function() {
   h1.classList.toggle("nachtstyletext");
   p.classList.toggle("nachtstyletext");
   bg.classList.toggle("nachtstylebg2")
-  bla.classList.toggle("nachtstyleimage");
+  bla.classList.add('no-after');
+  // bla.classList.toggle("nachtstyleimage");
+  svg.classList.toggle("hide");
+  svgnacht.classList.toggle("hide");
 });
 
 
