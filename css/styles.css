@@ -73,7 +73,7 @@ body {
   display: flex;
   align-items: center;
   height: 70vh;
-  z-index: 1;
+  z-index: 3;
 }
 
 .button2 {
@@ -107,6 +107,14 @@ section:nth-of-type(1) {
   position: relative;
   overflow: hidden;
   /* transition: 0.2s ease; */
+}
+
+.imagebegin {
+  width: 100vw;
+  height: 70vh;
+  margin: 1em;
+  position: absolute;
+  z-index: 2;
 }
 
 .image::before, .image::after {
@@ -276,7 +284,7 @@ section:nth-of-type(1) {
   position: absolute;
   top: 30vh;
   left: 60vw;
-  z-index: 3;
+  z-index: 4;
   animation: float 5s linear infinite;
   animation-direction: alternate;
 }
@@ -396,13 +404,6 @@ p {
 }
 
 
-@media (min-width: 79em) {
-  .hide {
-    visibility: hidden;
-    transition: 2s ease;
-  }
-}
-
 
 
 
@@ -417,7 +418,7 @@ p {
   transition: 0.5s ease;
   letter-spacing: 5px;
   position: absolute;
-  z-index: 4;
+  z-index: 5;
 }
 
 .begintext:hover {
@@ -430,7 +431,7 @@ p {
   margin-top: -1em;
   cursor: url(../images/cursor2.png), auto;
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   background-color: black;
   width: 100vw;
   height: 100vh;

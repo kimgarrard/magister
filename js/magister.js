@@ -5,7 +5,7 @@
 let body = document.querySelector("body");
 let begintext = document.querySelector(".begintext");
 let sterrenlucht = document.querySelector(".sterrenlucht");
-let bg = document.querySelector(".image");
+let imagebegin = document.querySelector(".imagebegin");
 let svg = document.querySelector(".svgster");
 let svgnacht = document.querySelector(".svgnacht");
 let svgdag = document.querySelector(".svgdag");
@@ -28,6 +28,14 @@ let t = document.querySelector("h1 span:nth-of-type(8)");
 let e = document.querySelector("h1 span:nth-of-type(9)");
 let r = document.querySelector("h1 span:nth-of-type(10)");
 
+
+imagebegin.addEventListener('click', function() {
+    console.log("boe");
+    image.classList.toggle("changebg");
+    dag.classList.toggle("hide");
+    nacht.classList.toggle("hide");
+});
+
 begintext.addEventListener('click', function() {
   begintext.classList.add("hide");
   sterrenlucht.classList.add("invisible");
@@ -49,6 +57,8 @@ svg.addEventListener('mouseout', function() {
 });
 
 nacht.addEventListener('click', function() {
+  imagebegin.classList.toggle("hide");
+
   body.classList.toggle("nachtstylebg");
   h1.classList.toggle("nachtstyletext");
   p.classList.toggle("nachtstyletext");
@@ -59,10 +69,11 @@ nacht.addEventListener('click', function() {
   nacht.classList.toggle("nachtstylebutton");
 
   dag.classList.toggle("hide");
-  bg.classList.remove("imagebegin");
 });
 
 dag.addEventListener('click', function() {
+  imagebegin.classList.toggle("hide");
+
   body.classList.toggle("dagstylebg");
   h1.classList.toggle("dagstyletext");
   p.classList.toggle("dagstyletext");
@@ -129,19 +140,8 @@ function getKeyAndMove(e){
         console.log("R ingedrukt");
 				floatR();
 		}
-
-    switch(key_code){
-      case 32: //R
-        console.log("R ingedrukt");
-				changeBG();
-		}
 	}
 
-function changeBG() {
-    bg.classList.toggle("changebg");
-    dag.classList.toggle("hide");
-    nacht.classList.toggle("hide");
-}
 
 function floatM() {
     m.classList.toggle("float1");
