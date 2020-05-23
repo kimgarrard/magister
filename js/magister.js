@@ -173,3 +173,50 @@ function floatE() {
 function floatR() {
     r.classList.toggle("float2");
 }
+
+
+
+
+
+
+
+
+
+const mq = window.matchMedia( "(max-width: 79em)" );
+
+if (mq.matches) {
+
+  m.addEventListener('click', function() {
+      console.log("m");
+      m.classList.toggle("float1");
+  });
+
+  a.addEventListener('click', function() {
+      a.classList.toggle("float2");
+  });
+
+  g.addEventListener('click', function() {
+      g.classList.toggle("float1");
+  });
+
+  i.addEventListener('click', function() {
+      i.classList.toggle("float2");
+  });
+
+  s.addEventListener('click', function() {
+      s.classList.toggle("float1");
+  });
+
+  t.addEventListener('click', function() {
+      t.classList.toggle("float2");
+  });
+
+  e.addEventListener('click', function() {
+      e.classList.toggle("float1");
+  });
+
+  r.addEventListener('click', function() {
+      r.classList.toggle("float2");
+  });
+
+}
