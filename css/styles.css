@@ -388,6 +388,10 @@ p {
 }
 
 @media(min-width: 20em) and (max-width: 45em) {
+  html {
+    overflow: hidden;
+  }
+  
   .buttons {
     align-items: flex-start;
     margin: 0em 1em;
