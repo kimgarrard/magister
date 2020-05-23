@@ -31,10 +31,6 @@ body.addEventListener('click', function() {
   sterrenlucht.classList.add("invisible");
 });
 
-bg.addEventListener('click', function() {
-  bg.classList.toggle("changebg");
-});
-
 svg.addEventListener('mouseover', function() {
   console.log('ster');
   svg.classList.add("starspin");
@@ -54,7 +50,6 @@ nacht.addEventListener('click', function() {
   body.classList.toggle("nachtstylebg");
   h1.classList.toggle("nachtstyletext");
   p.classList.toggle("nachtstyletext");
-  // bg.classList.toggle("nachtstylebg2")
   image.classList.toggle('no-after');
   image.classList.toggle("nachtstyleimage");
   svg.classList.toggle("hide");
@@ -62,12 +57,14 @@ nacht.addEventListener('click', function() {
   nacht.classList.toggle("nachtstylebutton");
 
   dag.classList.toggle("hide");
+  bg.classList.remove("imagebegin");
 });
 
 dag.addEventListener('click', function() {
   body.classList.toggle("dagstylebg");
   h1.classList.toggle("dagstyletext");
   p.classList.toggle("dagstyletext");
+  // bg.classList.remove("changebg");
   image.classList.toggle('no-after');
   image.classList.toggle("dagstyleimage");
   svg.classList.toggle("hide");
@@ -75,6 +72,7 @@ dag.addEventListener('click', function() {
   dag.classList.toggle("nachtstylebutton");
 
   nacht.classList.toggle("hide");
+  bg.classList.remove("imagebegin");
 });
 
 
@@ -129,9 +127,19 @@ function getKeyAndMove(e){
         console.log("R ingedrukt");
 				floatR();
 		}
+
+    switch(key_code){
+      case 32: //R
+        console.log("R ingedrukt");
+				changeBG();
+		}
 	}
 
-
+function changeBG() {
+    bg.classList.toggle("changebg");
+    dag.classList.toggle("hide");
+    nacht.classList.toggle("hide");
+}
 
 function floatM() {
     m.classList.toggle("float1");

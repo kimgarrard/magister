@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -137,6 +143,31 @@ section:nth-of-type(1) {
   transition: 0.2s ease;
 }
 
+.changebg {
+  animation: polygon 2s forwards;
+}
+
+@keyframes polygon {
+  0% {
+    clip-path: polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%);
+  }
+
+  50% {
+    clip-path:  polygon(50% 50%, 50% 25%, 50% 50%, 75% 50%, 50% 50%, 50% 75%, 50% 50%, 25% 50%);
+    background-color: #65a5c1;
+  }
+
+  51% {
+    clip-path:  polygon(50% 50%, 50% 25%, 50% 50%, 75% 50%, 50% 50%, 50% 75%, 50% 50%, 25% 50%);
+    background-color:#E09B9B;
+  }
+
+  100% {
+    background-color: #9BB5E0;
+    clip-path: polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%);
+  }
+}
+
 .nachtstyleimage::before, .nachtstyleimage::after {
   content: "";
   background: url(../images/sterrenbegin.jpg) !important;
@@ -224,32 +255,6 @@ section:nth-of-type(1) {
   100% {
     opacity: 0.9;
     transform: translateX(0) scale(1.1);
-  }
-}
-
-
-.changebg {
-  animation: polygon 2s forwards;
-}
-
-@keyframes polygon {
-  0% {
-    clip-path: polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%);
-  }
-
-  50% {
-    clip-path:  polygon(50% 50%, 50% 25%, 50% 50%, 75% 50%, 50% 50%, 50% 75%, 50% 50%, 25% 50%);
-    background-color: #65a5c1;
-  }
-
-  51% {
-    clip-path:  polygon(50% 50%, 50% 25%, 50% 50%, 75% 50%, 50% 50%, 50% 75%, 50% 50%, 25% 50%);
-    background-color:#E09B9B;
-  }
-
-  100% {
-    background-color: #9BB5E0;
-    clip-path: polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%);
   }
 }
 
@@ -375,6 +380,16 @@ p {
 }
 
 @media(min-width: 20em) and (max-width: 45em) {
+  .buttons {
+    align-items: flex-start;
+    margin: 0em 1em;
+  }
+
+  .buttons div {
+    width: 20vw;
+    padding: 0.5em 1em;
+  }
+
   .image svg {
     width: 90vw;
   }
@@ -398,7 +413,7 @@ p {
   margin-top: -1em;
   cursor: url(../images/cursor2.png), auto;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   background-color: black;
   width: 100vw;
   height: 100vh;
