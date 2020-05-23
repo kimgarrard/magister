@@ -81,7 +81,7 @@ body {
   background-color: white !important;
 }
 
-.maan path {
+.maan path, .zon path, .zon circle {
   stroke-width: 1.5px !important;
   /* fill: rgba(239,202,8,0.2) !important; */
 }
