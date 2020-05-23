@@ -407,7 +407,21 @@ p {
 
 
 
+.begintext {
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 20vh;
+  opacity: 0.6;
+  transition: 0.5s ease;
+  letter-spacing: 5px;
+}
 
+.begintext:hover {
+  letter-spacing: 20px;
+  opacity: 1;
+  background-color: rgba(0,0,0,1);
+}
 
 .sterrenlucht {
   margin-top: -1em;
@@ -448,7 +462,7 @@ p {
 }
 
 .invisible {
-    animation: dissapear 0.5s forwards;
+    animation: dissapear 2s forwards;
 }
 
 @keyframes backgroundcolor  {
