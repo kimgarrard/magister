@@ -81,11 +81,6 @@ body {
   background-color: white !important;
 }
 
-.maan path, .zon path, .zon circle {
-  stroke-width: 1.5px !important;
-  /* fill: rgba(239,202,8,0.2) !important; */
-}
-
 section:nth-of-type(1) {
   display: flex;
   justify-content: center;
@@ -96,6 +91,7 @@ section:nth-of-type(1) {
   height: 70vh;
   margin: 1em;
   position: relative;
+  overflow: hidden;
   /* transition: 0.2s ease; */
 }
 
@@ -154,6 +150,30 @@ section:nth-of-type(1) {
   transition: 0s ease;
 }
 
+.dagstyleimage {
+  background-color: lightblue !important;
+  height: 70vh;
+  margin: 1em;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.dagstyleimage::before {
+  content: "";
+  background: url(../images/wolken.jpeg) !important;
+  background-size: cover;
+  mix-blend-mode: lighten !important;
+  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  filter: grayscale(100%);
+  animation: clouds 5s linear infinite;
+  transition: 0s ease;
+}
+
 @keyframes pulsate3  {
     0% {
       opacity: 0.4;
@@ -182,34 +202,19 @@ section:nth-of-type(1) {
     }
 }
 
-/* @keyframes pulsate3  {
-    0% {
-      opacity: 0.05;
-    }
+@keyframes clouds  {
+  0% {
+    transform: translateX(0) scale(1.05);
+  }
 
-    50% {
-      opacity: 0.0;
-    }
+  50% {
+    transform: translateX(2%) scale(1);
+  }
 
-    100% {
-      opacity: 0.05;
-    }
+  100% {
+    transform: translateX(0) scale(1.05);
+  }
 }
-
-@keyframes pulsate4  {
-    0% {
-      opacity: 0.0;
-    }
-
-    50% {
-      opacity: 0.1;
-    }
-
-    100% {
-      opacity: 0.0;
-    }
-} */
-
 
 
 .changebg {
@@ -280,7 +285,7 @@ section:nth-of-type(1) {
   z-index: 2;
 }
 
-.svgnacht {
+.svgnacht, .svgdag {
   padding: 1em;
 }
 

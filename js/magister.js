@@ -7,6 +7,7 @@ let sterrenlucht = document.querySelector(".sterrenlucht");
 let bg = document.querySelector(".image");
 let svg = document.querySelector(".svgster");
 let svgnacht = document.querySelector(".svgnacht");
+let svgdag = document.querySelector(".svgdag");
 let ster1 = document.querySelector(".ster1 polygon");
 let ster2 = document.querySelector(".ster2 polygon");
 let ster3 = document.querySelector(".ster3 polygon");
@@ -15,7 +16,7 @@ let nacht = document.querySelector(".nacht");
 let dag = document.querySelector(".dag");
 let h1 = document.querySelector("h1");
 let p = document.querySelector(".text p");
-let bla = document.querySelector(".image");
+let image = document.querySelector(".image");
 
 let m = document.querySelector("h1 span:nth-of-type(1)");
 let a = document.querySelector("h1 span:nth-of-type(2)");
@@ -54,11 +55,28 @@ nacht.addEventListener('click', function() {
   h1.classList.toggle("nachtstyletext");
   p.classList.toggle("nachtstyletext");
   bg.classList.toggle("nachtstylebg2")
-  bla.classList.toggle('no-after');
-  bla.classList.toggle("nachtstyleimage");
+  image.classList.toggle('no-after');
+  image.classList.toggle("nachtstyleimage");
   svg.classList.toggle("hide");
   svgnacht.classList.toggle("hide");
   nacht.classList.toggle("nachtstylebutton");
+});
+
+dag.addEventListener('click', function() {
+  body.classList.remove("nachtstylebg");
+  h1.classList.remove("nachtstyletext");
+  p.classList.remove("nachtstyletext");
+  bg.classList.remove("nachtstylebg2")
+  image.classList.remove('no-after');
+  image.classList.remove("nachtstyleimage");
+  svg.classList.remove("hide");
+  svgnacht.classList.add("hide");
+  nacht.classList.remove("nachtstylebutton");
+
+  image.classList.toggle('no-after');
+  image.classList.toggle("dagstyleimage");
+  svg.classList.toggle("hide");
+  svgdag.classList.toggle("hide");
 });
 
 
