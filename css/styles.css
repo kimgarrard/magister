@@ -787,3 +787,14 @@ p {
     offset-distance: 100%;
   }
 }
+
+/* 
+body:hover  {
+  animation: blur2 3s;
+}
+
+@keyframes blur2 {
+  0%   { transform:rotate(0deg) scale(1); filter: saturate(8); background-color: darkblue;}
+  50% { transform:rotate(180deg) scale(2); filter: hue-rotate(90deg); background-color: black;}
+  100% { transform:rotate(360deg) scale(1); filter: saturate(8); background-color: darkblue; }
+} */
