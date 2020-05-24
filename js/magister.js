@@ -215,6 +215,7 @@ function floatR() {
 }
 
 function spacee() {
+  body.classList.toggle("bodyturn");
   space.classList.toggle("hide");
 }
 

@@ -873,6 +873,7 @@ p {
   border-right: 1px solid blue;
   border-bottom: 1px solid red;
 }
+
 .square-1 {
 	animation-delay: 0s;
 }
@@ -945,4 +946,14 @@ p {
 		opacity: 0;
     border: 10px solid white;
 	}
+}
+
+.bodyturn {
+  animation: bodyturn 10s linear infinite;
+}
+
+@keyframes bodyturn {
+  50% {
+    transform: scale(1.5) rotate(10deg);
+  }
 }
