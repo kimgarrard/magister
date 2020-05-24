@@ -5,7 +5,7 @@ Ik heb gekozen om de voorkant van een boekje van het font 'Magister' na te maken
 
 <img width="400" alt="Magister" src="https://user-images.githubusercontent.com/43337685/82755869-ce6c7d00-9dd6-11ea-83f5-4dad5b305aa6.jpg">
 
-## Interactie / animatie
+## Interactie / Animatie
 Mijn site begint met een beeld vol sterren en een zwevende 'kijker', wanneer je klikt op 'enter the universe of magister' ga je als het ware door de sterrenlucht heen en kom je bij het kunstwerk. Hier kun je de achtergrondkleur aanpassen, de svg laten draaien en animeren door er overheen te hoveren, 'magister' typen en deze letters apart laten rondzweven en je kunt op de knoppen 'night' en 'day' klikken. 
 
 ![github_magister](https://user-images.githubusercontent.com/43337685/82755856-b694f900-9dd6-11ea-8281-4edeb0049152.gif)
