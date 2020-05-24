@@ -18,6 +18,7 @@ let nachtster2 = document.querySelector(".nachtster2");
 let nachtster3 = document.querySelector(".nachtster3");
 let dagzonstralen = document.querySelector(".zon2 path");
 let dagzon = document.querySelector(".zon2 circle");
+let space = document.querySelector(".wrapper");
 
 let nacht = document.querySelector(".nacht");
 let dag = document.querySelector(".dag");
@@ -169,8 +170,17 @@ function getKeyAndMove(e){
         console.log("R ingedrukt");
 				floatR();
 		}
+
+    switch(key_code){
+      case 32: //R
+				spacee();
+		}
 	}
 
+
+const mq2 = window.matchMedia( "(min-width: 79em)" );
+
+if (mq2.matches) {
 
 function floatM() {
     m.classList.toggle("float1");
@@ -202,6 +212,12 @@ function floatE() {
 
 function floatR() {
     r.classList.toggle("float2");
+}
+
+function spacee() {
+  space.classList.toggle("hide");
+}
+
 }
 
 
