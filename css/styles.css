@@ -308,6 +308,7 @@ section:nth-of-type(1) {
   position: absolute;
   height: 70vh;
   z-index: 2;
+  transition: 0.5s ease;
 }
 
 .svgnacht, .svgdag {
@@ -343,12 +344,38 @@ section:nth-of-type(1) {
   }
 }
 
-@keyframes spincoloryellow {
+.nighttwinkle1 {
+  animation: twinkle 0.5s  ease;
+}
+
+.nighttwinkle3 {
+  animation: twinkle 0.5s 0.3s ease;
+}
+
+.nighttwinkle2 {
+  animation: twinkle 0.5s 0.6s ease;
+}
+
+@keyframes twinkle {
+  0% {
+    fill: none;
+  }
+
+  50% {
+    fill: rgba(255,255,255,0.5);
+  }
+
+  100% {
+    fill: none;
+  }
+}
+
+/* @keyframes spincoloryellow {
   50% {
     stroke: rgba(255,203,71,0.5);
     stroke-width: 0.75px
   }
-}
+} */
 
 section:nth-of-type(2) h1, section:nth-of-type(2) div {
   width: 100vw;
