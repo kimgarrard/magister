@@ -954,6 +954,6 @@ p {
 
 @keyframes bodyturn {
   50% {
-    transform: scale(1.5) rotate(10deg);
+    transform: scale(1.5) rotate(10deg); filter:hue-rotate(130deg);
   }
 }
