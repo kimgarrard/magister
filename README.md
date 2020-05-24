@@ -3,7 +3,7 @@
 ## Magister
 Ik heb gekozen om de voorkant van een boekje van het font 'Magister' na te maken en te animeren. Dit font bestaat nu niet meer, maar deze lijkt heel erg op Times New Roman. Ik heb voor dit kunstwerk gekozen, omdat het me heel leuk leek om dit te animeren. Met name door de sterren en de heelal achtige sfeer, hier kreeg ik al gelijk leuke ideeën voor. 
 
-![Magister](https://user-images.githubusercontent.com/43337685/82755869-ce6c7d00-9dd6-11ea-83f5-4dad5b305aa6.jpg)
+<img width="400" alt="Magister" src="https://user-images.githubusercontent.com/43337685/82755869-ce6c7d00-9dd6-11ea-83f5-4dad5b305aa6.jpg">
 
 ## Interactie / animatie
 Mijn site begint met een beeld vol sterren en een zwevende 'kijker', wanneer je klikt op 'enter the universe of magister' ga je als het ware door de sterrenlucht heen en kom je bij het kunstwerk. Hier kun je de achtergrondkleur aanpassen, de svg laten draaien en animeren door er overheen te hoveren, 'magister' typen en deze letters apart laten rondzweven en je kunt op de knoppen 'night' en 'day' klikken. 
