@@ -342,6 +342,20 @@ section:nth-of-type(1) {
   animation-direction: alternate;
 }
 
+@keyframes float {
+  0% {
+    transform: perspective(10em) translate3d(0vh, 0vh, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: perspective(10em) translate3d(-2vh, -5vh, 1em) rotate(-5deg);
+  }
+
+  100% {
+    transform: perspective(10em) translate3d(-5vh, 0vh, -2em) rotate(-10deg);
+  }
+}
+
 section:nth-of-type(2) h1, section:nth-of-type(2) div {
   width: 100vw;
   display: flex;
@@ -370,6 +384,60 @@ h1 {
   transition: 0.5s ease;
   position: relative;
   z-index: 3;
+}
+
+.float1 {
+  animation: floatletter1 20s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes floatletter1 {
+    0% {
+        transform: translate(0vw, 0vh);
+    }
+
+    25% {
+        transform: translate(-5vw, -30vh) rotate(-20deg);
+    }
+
+    50% {
+        transform: translate(-5vw, -50vh) rotate(20deg);
+    }
+
+    75% {
+        transform: translate(5vw, -20vh) rotate(50deg);
+    }
+
+    100% {
+        transform: translate(0vw, 0vh);
+    }
+}
+
+.float2 {
+  animation: floatletter2 20s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes floatletter2 {
+    0% {
+        transform: translate(0vw, 0vh);
+    }
+
+    25% {
+        transform: translate(5vw, -20vh) rotate(-50deg);
+    }
+
+    50% {
+        transform: translate(-5vw, -50vh) rotate(-20deg);
+    }
+
+    75% {
+        transform: translate(-5vw, -30vh) rotate(20deg);
+    }
+
+    100% {
+        transform: translate(0vw, 0vh);
+    }
 }
 
 p {
@@ -422,54 +490,6 @@ p {
 
 
 
-.dagstylebg {
-  background-color: #FFB627;
-}
-
-.dagstyletext {
-  color: white !important;
-}
-
-.dagstyleimage {
-  background-color: #2DC7FF !important;
-  height: 70vh;
-  margin: 1em;
-  position: relative;
-  transition: 0.2s ease;
-}
-
-.dagstyleimage::before {
-  content: "";
-  background: url(../images/wolken.jpeg) !important;
-  background-size: cover;
-  mix-blend-mode: screen !important;
-  background-repeat: repeat;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  filter: grayscale(100%);
-  animation: clouds 5s linear infinite;
-  transition: 0s ease;
-}
-
-@keyframes clouds  {
-  0% {
-    opacity: 0.9;
-    transform: translateX(0) scale(1.1);
-  }
-
-  50% {
-    opacity: 0.7;
-    transform: translateX(2%) scale(1.05);
-  }
-
-  100% {
-    opacity: 0.9;
-    transform: translateX(0) scale(1.1);
-  }
-}
 
 
 /* NACHTSTIJL */
@@ -514,30 +534,9 @@ p {
   transition: 0s ease;
 }
 
-@keyframes float {
-  0% {
-    transform: perspective(10em) translate3d(0vh, 0vh, 0) rotate(0deg);
-  }
-
-  50% {
-    transform: perspective(10em) translate3d(-2vh, -5vh, 1em) rotate(-5deg);
-  }
-
-  100% {
-    transform: perspective(10em) translate3d(-5vh, 0vh, -2em) rotate(-10deg);
-  }
-}
-
 .svgnacht {
   padding: 1em;
-}
-
-.svgnacht {
   filter: drop-shadow(0px 0px 20px white);
-}
-
-.svgdag {
-  filter: drop-shadow(0px 0px 20px rgba(255,182,39,1));
 }
 
 .svgnacht:hover {
@@ -594,6 +593,79 @@ p {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DAGSTIJL */
+.dagstylebg {
+  background-color: #FFB627;
+}
+
+.dagstyletext {
+  color: white !important;
+}
+
+.dagstyleimage {
+  background-color: #2DC7FF !important;
+  height: 70vh;
+  margin: 1em;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.dagstyleimage::before {
+  content: "";
+  background: url(../images/wolken.jpeg) !important;
+  background-size: cover;
+  mix-blend-mode: screen !important;
+  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  filter: grayscale(100%);
+  animation: clouds 5s linear infinite;
+  transition: 0s ease;
+}
+
+@keyframes clouds  {
+  0% {
+    opacity: 0.9;
+    transform: translateX(0) scale(1.1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: translateX(2%) scale(1.05);
+  }
+
+  100% {
+    opacity: 0.9;
+    transform: translateX(0) scale(1.1);
+  }
+}
+
+.svgdag {
+  filter: drop-shadow(0px 0px 20px rgba(255,182,39,1));
+}
+
 .dayshine {
   animation: shine 3s ease;
 }
@@ -615,6 +687,21 @@ p {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
 @media(min-width: 20em) and (max-width: 45em) {
   html {
     overflow: hidden;
@@ -682,6 +769,10 @@ p {
   }
 }
 
+
+
+
+
 @media(min-width: 45em) and (max-width: 79em) {
   html {
     overflow: hidden;
@@ -729,59 +820,6 @@ p {
 
 
 
-.float1 {
-  animation: floatletter1 20s linear infinite;
-  animation-direction: alternate;
-}
-
-@keyframes floatletter1 {
-    0% {
-        transform: translate(0vw, 0vh);
-    }
-
-    25% {
-        transform: translate(-5vw, -30vh) rotate(-20deg);
-    }
-
-    50% {
-        transform: translate(-5vw, -50vh) rotate(20deg);
-    }
-
-    75% {
-        transform: translate(5vw, -20vh) rotate(50deg);
-    }
-
-    100% {
-        transform: translate(0vw, 0vh);
-    }
-}
-
-.float2 {
-  animation: floatletter2 20s linear infinite;
-  animation-direction: alternate;
-}
-
-@keyframes floatletter2 {
-    0% {
-        transform: translate(0vw, 0vh);
-    }
-
-    25% {
-        transform: translate(5vw, -20vh) rotate(-50deg);
-    }
-
-    50% {
-        transform: translate(-5vw, -50vh) rotate(-20deg);
-    }
-
-    75% {
-        transform: translate(-5vw, -30vh) rotate(20deg);
-    }
-
-    100% {
-        transform: translate(0vw, 0vh);
-    }
-}
 
 
 
@@ -800,6 +838,7 @@ p {
 
 
 
+/* SPACEBAR EFFECT */
 .wrapper {
 	overflow: hidden;
 	position: absolute;
@@ -825,12 +864,9 @@ p {
 
 .square {
   position: absolute;
-	fill: none;
-  /* border: 1px solid white; */
-  /* border-radius: 100%; */
   width: 20em;
   height: 30em;
-  animation: circleanimation 10s linear infinite;
+  animation: squareanimation 10s linear infinite;
 
   border-top: 1px solid white;
   border-left: 1px solid green;
@@ -898,7 +934,7 @@ p {
 	animation-delay: -9.5s;
 }
 
-@keyframes circleanimation{
+@keyframes squareanimation{
 	0%{
 		transform: scale(0) rotate(0deg);
 		opacity: 1;
