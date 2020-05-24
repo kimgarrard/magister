@@ -348,7 +348,7 @@ section:nth-of-type(1) {
 @keyframes spincolor {
   50% {
     stroke: rgba(36,59,74,0.5);
-    stroke-width: 0.75px
+    stroke-width: 1px
   }
 }
 
@@ -376,7 +376,7 @@ section:nth-of-type(1) {
 
 @keyframes moon {
   50% {
-    stroke-width: 0.75px
+    stroke-width: 1px
   }
 }
 
@@ -411,17 +411,19 @@ section:nth-of-type(1) {
 }
 
 @keyframes shine {
-  0% {
-    fill: none;
-  }
-
   50% {
     fill: rgba(255,182,39,0.3);
-    stroke-width: 0.75px;
+    stroke-width: 1px;
   }
+}
 
-  100% {
-    fill: none;
+.dayshinestroke {
+  animation: shinestroke 3s ease;
+}
+
+@keyframes shinestroke {
+  50% {
+    stroke-width: 1px;
   }
 }
 

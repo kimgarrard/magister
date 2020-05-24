@@ -78,12 +78,12 @@ svgnacht.addEventListener('mouseout', function() {
 
 svgdag.addEventListener('mouseover', function() {
   dagzonstralen.classList.add("dayshine");
-  dagzon.classList.add("dayshine");
+  dagzon.classList.add("dayshinestroke");
 });
 
 svgdag.addEventListener('mouseout', function() {
   dagzonstralen.classList.remove("dayshine");
-  dagzon.classList.remove("dayshine");
+  dagzon.classList.remove("dayshinestroke");
 });
 
 nacht.addEventListener('click', function() {
