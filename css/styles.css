@@ -60,6 +60,7 @@ body {
 
 .overlay {
   position: absolute;
+  top: 0;
   background-image: url(../images/grain.jpg);
   background-size: 100vw;
   width: 100vw;
