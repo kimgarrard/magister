@@ -30,7 +30,6 @@ body {
   font-family: Times;
   cursor: url(../images/cursor2.png), auto;
   transition: 0.5s ease;
-  /* overflow: hidden; */
 }
 
 .hide {
@@ -825,7 +824,7 @@ p {
   transition: 1s ease;
 }
 
-.circle {
+.square {
   position: absolute;
 	fill: none;
   /* border: 1px solid white; */
@@ -839,64 +838,64 @@ p {
   border-right: 1px solid blue;
   border-bottom: 1px solid red;
 }
-.circle-1 {
+.square-1 {
 	animation-delay: 0s;
 }
-.circle-2 {
+.square-2 {
 	animation-delay: -0.5s;
 }
-.circle-3 {
+.square-3 {
 	animation-delay: -1s;
 }
-.circle-4 {
+.square-4 {
 	animation-delay: -1.5s;
 }
-.circle-5 {
+.square-5 {
 	animation-delay: -2s;
 }
-.circle-6 {
+.square-6 {
 	animation-delay: -2.5s;
 }
-.circle-7 {
+.square-7 {
 	animation-delay: -3s;
 }
-.circle-8 {
+.square-8 {
 	animation-delay: -3.5s;
 }
-.circle-9 {
+.square-9 {
 	animation-delay: -4s;
 }
-.circle-10 {
+.square-10 {
 	animation-delay: -4.5s;
 }
-.circle-11 {
+.square-11 {
 	animation-delay: -5s;
 }
-.circle-12 {
+.square-12 {
 	animation-delay: -5.5s;
 }
-.circle-13 {
+.square-13 {
 	animation-delay: -6s;
 }
-.circle-14 {
+.square-14 {
 	animation-delay: -6.5s;
 }
-.circle-15 {
+.square-15 {
 	animation-delay: -7s;
 }
-.circle-16 {
+.square-16 {
 	animation-delay: -7.5s;
 }
-.circle-17 {
+.square-17 {
 	animation-delay: -8s;
 }
-.circle-18 {
+.square-18 {
 	animation-delay: -8.5s;
 }
-.circle-19 {
+.square-19 {
 	animation-delay: -9s;
 }
-.circle-20 {
+.square-20 {
 	animation-delay: -9.5s;
 }
 
