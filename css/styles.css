@@ -319,7 +319,11 @@ section:nth-of-type(1) {
   filter: drop-shadow(0px 0px 20px white);
 }
 
-.svgster:hover {
+.svgdag {
+  filter: drop-shadow(0px 0px 20px rgba(255,182,39,1));
+}
+
+.svgster:hover, .svgdag:hover {
   animation: spin 3s;
 }
 
@@ -395,6 +399,25 @@ section:nth-of-type(1) {
 
   50% {
     fill: rgba(255,255,255,0.5);
+  }
+
+  100% {
+    fill: none;
+  }
+}
+
+.dayshine {
+  animation: shine 3s ease;
+}
+
+@keyframes shine {
+  0% {
+    fill: none;
+  }
+
+  50% {
+    fill: rgba(255,182,39,0.3);
+    stroke-width: 0.75px;
   }
 
   100% {

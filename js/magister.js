@@ -16,6 +16,8 @@ let maan = document.querySelector(".maan2 path");
 let nachtster1 = document.querySelector(".nachtster1");
 let nachtster2 = document.querySelector(".nachtster2");
 let nachtster3 = document.querySelector(".nachtster3");
+let dagzonstralen = document.querySelector(".zon2 path");
+let dagzon = document.querySelector(".zon2 circle");
 
 let nacht = document.querySelector(".nacht");
 let dag = document.querySelector(".dag");
@@ -72,6 +74,16 @@ svgnacht.addEventListener('mouseout', function() {
   nachtster1.classList.remove("nighttwinkle1");
   nachtster2.classList.remove("nighttwinkle2");
   nachtster3.classList.remove("nighttwinkle3");
+});
+
+svgdag.addEventListener('mouseover', function() {
+  dagzonstralen.classList.add("dayshine");
+  dagzon.classList.add("dayshine");
+});
+
+svgdag.addEventListener('mouseout', function() {
+  dagzonstralen.classList.remove("dayshine");
+  dagzon.classList.remove("dayshine");
 });
 
 nacht.addEventListener('click', function() {
