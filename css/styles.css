@@ -344,16 +344,34 @@ section:nth-of-type(1) {
   }
 }
 
+.svgnacht:hover {
+  animation: spinmoon 3s;
+}
+
+@keyframes spinmoon {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-40deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .nighttwinkle1 {
-  animation: twinkle 0.5s  ease;
+  animation: twinkle 0.5s 0.5s 2 ease;
 }
 
 .nighttwinkle3 {
-  animation: twinkle 0.5s 0.3s ease;
+  animation: twinkle 0.5s 0.8s 2 ease;
 }
 
 .nighttwinkle2 {
-  animation: twinkle 0.5s 0.6s ease;
+  animation: twinkle 0.5s 1.1s 2 ease;
 }
 
 @keyframes twinkle {
