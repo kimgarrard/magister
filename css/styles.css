@@ -274,6 +274,7 @@ section:nth-of-type(1) {
   animation: polygon 2s forwards;
 }
 
+/* https://css-tricks.com/animating-with-clip-path/ */
 @keyframes polygon {
   0% {
     clip-path: polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%);
