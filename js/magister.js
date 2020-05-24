@@ -12,6 +12,7 @@ let svgdag = document.querySelector(".svgdag");
 let ster1 = document.querySelector(".ster1 polygon");
 let ster2 = document.querySelector(".ster2 polygon");
 let ster3 = document.querySelector(".ster3 polygon");
+let maan = document.querySelector(".maan2 path");
 let nachtster1 = document.querySelector(".nachtster1");
 let nachtster2 = document.querySelector(".nachtster2");
 let nachtster3 = document.querySelector(".nachtster3");
@@ -60,12 +61,14 @@ svg.addEventListener('mouseout', function() {
 });
 
 svgnacht.addEventListener('mouseover', function() {
+  maan.classList.add("moon");
   nachtster1.classList.add("nighttwinkle1");
   nachtster2.classList.add("nighttwinkle2");
   nachtster3.classList.add("nighttwinkle3");
 });
 
 svgnacht.addEventListener('mouseout', function() {
+  maan.classList.remove("moon");
   nachtster1.classList.remove("nighttwinkle1");
   nachtster2.classList.remove("nighttwinkle2");
   nachtster3.classList.remove("nighttwinkle3");

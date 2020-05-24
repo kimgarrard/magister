@@ -315,6 +315,10 @@ section:nth-of-type(1) {
   padding: 1em;
 }
 
+.svgnacht {
+  filter: drop-shadow(0px 0px 20px white);
+}
+
 .svgster:hover {
   animation: spin 3s;
 }
@@ -362,6 +366,16 @@ section:nth-of-type(1) {
   }
 }
 
+.moon {
+  animation: moon 3s;
+}
+
+@keyframes moon {
+  50% {
+    stroke-width: 0.75px
+  }
+}
+
 .nighttwinkle1 {
   animation: twinkle 0.5s 0.5s 2 ease;
 }
@@ -387,13 +401,6 @@ section:nth-of-type(1) {
     fill: none;
   }
 }
-
-/* @keyframes spincoloryellow {
-  50% {
-    stroke: rgba(255,203,71,0.5);
-    stroke-width: 0.75px
-  }
-} */
 
 section:nth-of-type(2) h1, section:nth-of-type(2) div {
   width: 100vw;
